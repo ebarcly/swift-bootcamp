@@ -104,18 +104,38 @@
 
 
 
-func getMilk (bottles: Int) {
-    var cost = Double(bottles) * 1.5
+//func getMilk (bottles: Int) {
+//    var cost = Double(bottles) * 1.5
+//    
+//    print(cost)
+//}
+//
+//getMilk(bottles: 3)
+//
+//
+//func greetings (name: String) {
+//    
+//    print("Hello \(name)")
+//}
+//
+//greetings(name: "Enrique")
+
+
+func loveCalculator () {
+    var randomInt = Int.random(in: 0...100)
     
-    print(cost)
+    switch randomInt {
+    case 81...100:
+        print("You love like Kanye loves Kanye")
+    case 41..<81:
+        print("You love like mentos and coke")
+    case ...40:
+        print("Your love is invisible at \(randomInt) %")
+    default:
+        print("No love")
+    }
 }
 
-getMilk(bottles: 3)
+loveCalculator()
 
 
-func greetings (name: String) {
-    
-    print("Hello \(name)")
-}
-
-greetings(name: "Enrique")
