@@ -121,21 +121,112 @@
 //greetings(name: "Enrique")
 
 
-func loveCalculator () {
-    var randomInt = Int.random(in: 0...100)
-    
-    switch randomInt {
-    case 81...100:
-        print("You love like Kanye loves Kanye")
-    case 41..<81:
-        print("You love like mentos and coke")
-    case ...40:
-        print("Your love is invisible at \(randomInt) %")
-    default:
-        print("No love")
+//func loveCalculator () {
+//    var randomInt = Int.random(in: 0...100)
+//    
+//    switch randomInt {
+//    case 81...100:
+//        print("You love like Kanye loves Kanye")
+//    case 41..<81:
+//        print("You love like mentos and coke")
+//    case ...40:
+//        print("Your love is invisible at \(randomInt) %")
+//    default:
+//        print("No love")
+//    }
+//}
+//
+//loveCalculator()
+
+
+//struct Town {
+//    let name: String
+//    var citizens: [String]
+//    var resources: [String: Int]
+//    
+//    init(name: String, citizens: [String], resources: [String : Int]) {
+//        self.name = name
+//        self.citizens = citizens
+//        self.resources = resources
+//    }
+//    
+//    func fortify() {
+//        print("Defenses are UP!")
+//    }
+//}
+//
+//var MyTown = Town(name: "Belleville", citizens: ["Jack Ma"], resources: ["Computers": 2])
+//
+//print("\(MyTown.citizens[0]) lives in \(MyTown.name) and he has \(MyTown.resources["Computers"]!)")
+//print(MyTown.citizens[0])
+
+//class Vehicle {
+//    var speed: Double
+//    var capacity: Int
+//    
+//    init(speed: Double, capacity: Int) {
+//        self.speed = speed
+//        self.capacity = capacity
+//    }
+//    
+//    func describe() -> String {
+//        return "A vehicle moving at \(speed) km/h with a capacity of \(capacity) people."
+//    }
+//}
+//
+//class Car: Vehicle {
+//    var brand: String
+//    
+//    init(speed: Double, capacity: Int, brand: String) {
+//        self.brand = brand
+//        super.init(speed: speed, capacity: capacity)
+//    }
+//    
+//    override func describe() -> String {
+//        return "A \(brand) car moving at \(speed) km/h with a capacity of \(capacity) people."
+//    }
+//}
+//
+//let myCar = Car(speed: 120.0, capacity: 2, brand: "Porsche")
+//print(myCar.describe())
+
+
+// Define the User struct here
+    struct User {
+        var name: String
+        var email: String?
+        var followers: Int
+        var isActive: Bool
+        
+        init(name: String, email: String?, followers: Int, isActive: Bool) {
+            self.name = name
+            self.email = email
+            self.followers = followers
+            self.isActive = isActive
+        }
+        
+        func logStatus() {
+            if isActive == true {
+                print("\(name) is working hard")
+            } else {
+                print("\(name) has left earth")
+            }
+        }
     }
-}
+    
+    
+    
+    // Initialise a User struct here
+let Richard = User(name: "Richard", email: "", followers: 0, isActive: false)
+Richard.logStatus()
 
-loveCalculator()
 
-
+    // Diagnostic code - do not change this code
+    print("\nDiagnostic code (i.e., Challenge Hint):")
+    var musk = User(name: "Elon", email: "elon@tesla.com", followers: 2001, isActive: true)
+    musk.logStatus()
+    print("Contacting \(musk.name) on \(musk.email!) ...")
+    print("\(musk.name) has \(musk.followers) followers")
+    // sometime later
+    musk.isActive = false
+    musk.logStatus()
