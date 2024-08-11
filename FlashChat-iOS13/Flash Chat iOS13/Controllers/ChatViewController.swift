@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ChatViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "⚡️FlashChat"
+        navigationItem.hidesBackButton = true
+        
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
     }
     
-
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        
+        do {
+            try Auth.auth().signOut()
+            
+            // pop all the nav stack sending the user back to the main screen
+            navigationController?.popToRootViewController(animated: true)
+            
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+        
+    }
+    
 }
