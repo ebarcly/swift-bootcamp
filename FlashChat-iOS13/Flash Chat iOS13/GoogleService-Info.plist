@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyCyM-T2ttnUFr8gIXlT7tcgj5J88g6inEI</string>
+	<string>AIzaSyCYlnBXY3X_jpuBNthTPDgdZqPC2nWsnPA</string>
 	<key>GCM_SENDER_ID</key>
 	<string>110322101201</string>
 	<key>PLIST_VERSION</key>
@@ -15,15 +15,15 @@
 	<key>STORAGE_BUCKET</key>
 	<string>flashchat-ios-dd670.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:110322101201:ios:ed8e34d3fa4ade417dcef0</string>
 </dict>
